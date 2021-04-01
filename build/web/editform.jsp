@@ -3,7 +3,7 @@
     Created on : Apr 24, 2020, 12:14:41 AM
     Author     : acer
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html>
 <%@ page import="java.sql.ResultSet" %>
@@ -22,14 +22,15 @@
     <body>
         <%
            //Connection connect = null;
+           Connection connect = ConnDB.connect();
             Statement s = null;
             request.setCharacterEncoding("UTF-8");
             response.setContentType("text/html; charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                //Class.forName("com.mysql.jdbc.Driver");
 
-                s = dbconnect.connect();
+                s = connect.createStatement();
 
                 String strId = request.getParameter("id");
 

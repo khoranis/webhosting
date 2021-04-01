@@ -1,0 +1,29 @@
+SMAP
+index_jsp.java
+JSP
+*S JSP
+*F
++ 0 index.jsp
+admin/pages/dashboard/index.jsp
++ 1 navbar.jsp
+admin/pages/dashboard/../../include/navbar.jsp
++ 2 datauser.jsp
+admin/pages/dashboard/../../include/datauser.jsp
++ 3 footer.jsp
+admin/pages/dashboard/../../include/footer.jsp
+*L
+5,26:60
+5#1,13:86
+18:99,3
+19,7:102
+30#0,5:108
+5#2,22:113
+27:135,2
+28:137,3
+29,16:140
+34#0,4:155
+38:159,3
+39,27:162
+5#3,20:189
+65#0,17:208
+*E

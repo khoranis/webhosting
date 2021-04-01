@@ -4,6 +4,7 @@
     Author     : acer
 --%>
 
+<%@page import="condb.ConnDB"%>
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html>
 <%@ page import="java.sql.ResultSet" %>
@@ -22,15 +23,11 @@
     </head>
 
                             <%
-                                Connection connect = null;
+
+                                Connection connect = ConnDB.connect();
                                 Statement s = null;
                                 String id = request.getParameter("id");
                                 try {
-                                    Class.forName("com.mysql.jdbc.Driver");
-
-                                    connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting"
-                                            + "?user=root&password=");
-
                                     s = connect.createStatement();
 
                                     String sql = "SELECT * FROM data_users AS du INNER JOIN domain AS d ON du.username = d.username WHERE d.username = '" + id + "' ";

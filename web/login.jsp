@@ -3,7 +3,7 @@
     Created on : Apr 23, 2020, 5:09:01 PM
     Author     : acer
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ page import="java.sql.ResultSet" %>
@@ -30,9 +30,10 @@
     <body>
         <%
 //            Connection connect = null;
+            Connection connect = ConnDB.connect();
             Statement s = null;
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+//                Class.forName("com.mysql.jdbc.Driver");
 //                connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting" + "?user=root&password=");
 
                 String passwordToHash = request.getParameter("Password");
@@ -49,7 +50,7 @@
                 generatedPassword = sb.toString();
                 String username = request.getParameter("Username");
                 String password = generatedPassword;
-                s = dbconnect.connect();
+                s = connect.createStatement();
 
                 String sql = "SELECT * FROM domain AS d INNER JOIN data_users AS du ON d.username = du.username WHERE "
                         + " du.username = '" + username + "' AND "

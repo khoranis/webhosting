@@ -3,7 +3,7 @@
     Created on : Jul 24, 2020, 9:02:43 PM
     Author     : khora
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@page import="java.util.UUID"%>
 <%@page import="java.nio.charset.Charset"%>
 <%@page import="java.util.Random"%>
@@ -29,10 +29,11 @@
     </head>
     <body>
         <%
-            Connection connect = null;
+            //Connection connect = null;
+            Connection connect = ConnDB.connect();
             Statement s = null;
-            Class.forName("com.mysql.jdbc.Driver");
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting" + "?user=root&password=");
+            //Class.forName("com.mysql.jdbc.Driver");
+            //connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting" + "?user=root&password=");
             String passwordToHash = request.getParameter("password"); 
             String generatedPassword = null;
             MessageDigest md = MessageDigest.getInstance("MD5");

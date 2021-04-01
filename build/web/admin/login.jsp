@@ -3,7 +3,7 @@
     Created on : Jun 6, 2019, 7:59:52 PM
     Author     : Filmpy
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ page import="java.sql.ResultSet" %>
@@ -32,13 +32,10 @@
             boolean chk = false;
 
             if (request.getParameter("submit") != null) {
-                Connection connect = null;
+                Connection connect = ConnDB.connect();
                 Statement s = null;
 
                 try {
-                    Class.forName("com.mysql.jdbc.Driver");
-
-                    connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting" + "?user=root&password=");
 
                     String username = request.getParameter("Username");
 

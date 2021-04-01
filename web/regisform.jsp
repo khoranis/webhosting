@@ -3,6 +3,7 @@
     Created on : Apr 28, 2020, 6:00:59 PM
     Author     : acer
 --%>
+<%@page import="condb.ConnDB"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ page import="java.sql.ResultSet" %>
@@ -25,16 +26,17 @@
     </head>
     <body>
         <% 
+            Connection connect = ConnDB.connect();
             Statement s = null;
             request.setCharacterEncoding("UTF-8");
             response.setContentType("text/html; charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
 
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                //Class.forName("com.mysql.jdbc.Driver");
 //                connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting?user=root&password=");
 
-                s = dbconnect.connect();
+                s = connect.createStatement();
                 String key = UUID.randomUUID().toString();
                 String[] pass = key.split("-");
 

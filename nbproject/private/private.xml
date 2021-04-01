@@ -3,7 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/index.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/edit.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/admin/login.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/success.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/confirmcheckpass.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/editform.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/login.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/datausers.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/userpage.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/checkpassform.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/regisform.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/newuser.jsp</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/src/java/condb/ConnDB.java</file>
+            <file>file:/C:/xampp/htdocs/Webhosting/Webhosting/web/addform.jsp</file>
         </group>
     </open-files>
 </project-private>

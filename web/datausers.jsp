@@ -3,7 +3,7 @@
     Created on : May 13, 2020, 5:06:00 PM
     Author     : acer
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!doctype html>
 <%@ page import="java.sql.ResultSet" %>
@@ -23,17 +23,18 @@
     </head>
     <body>
         <%
-            Connection connect = null;
+            //Connection connect = null;
+            Connection connect = ConnDB.connect();
             Statement s = null;
 
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                //Class.forName("com.mysql.jdbc.Driver");
 
                 //connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting" + "?user=root&password=");
 
                 //s = connect.createStatement(ResultSet.TYPE_FORWARD_ONLY,
                         //ResultSet.CONCUR_READ_ONLY);
-                s = dbconnect.connect();
+                s = connect.createStatement();
                 
                 String sql = "";
                 String name = String.valueOf(session.getAttribute("name"));

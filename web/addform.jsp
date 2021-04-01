@@ -3,7 +3,7 @@
     Created on : May 13, 2020, 5:44:46 PM
     Author     : acer
 --%>
-
+<%@page import="condb.ConnDB"%>
 <%@page import="java.util.UUID"%>
 <%@page import="java.nio.charset.Charset"%>
 <%@page import="java.util.Random"%>
@@ -28,7 +28,7 @@
     </head>
     <body>
         <%
-            Connection connect = null;
+            Connection connect = ConnDB.connect();
             Statement s = null;
             String sql = "";
             String username = request.getParameter("email");
@@ -39,10 +39,10 @@
             response.setContentType("text/html; charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                //Class.forName("com.mysql.jdbc.Driver");
 
-                connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting"
-                        + "?user=root&password=");
+                //connect = DriverManager.getConnection("jdbc:mysql://localhost/webhosting"
+                        //+ "?user=root&password=");
 
                 s = connect.createStatement();
 
