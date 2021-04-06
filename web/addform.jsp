@@ -32,8 +32,9 @@
             Statement s = null;
             String sql = "";
             String username = request.getParameter("email");
-            String key = UUID.randomUUID().toString();
-            String[] pass = key.split("-");
+            String password = request.getParameter("password");
+            //String key = UUID.randomUUID().toString();
+            //String[] pass = key.split("-");
             
             request.setCharacterEncoding("UTF-8");
             response.setContentType("text/html; charset=UTF-8");
@@ -48,7 +49,7 @@
 
                 String name = String.valueOf(session.getAttribute("name"));
 
-                String passwordToHash = pass[0];
+                String passwordToHash = password;
                 String generatedPassword = null;
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 md.update(passwordToHash.getBytes());
@@ -75,17 +76,16 @@
                                 + ",'" + strPassword + "' "
                                 + ",'" + username + "') ";
                         s.executeUpdate(sql);
-
+                        out.println(sql);   
                         if (s != null) {
                             sql = "SELECT domain_name FROM domain WHERE username ='" + name + "'";
                             rec = s.executeQuery(sql);
-                            String link = "http://localhost:8080/Webhosting/index.jsp/newuser.jsp?id=" + username;
                             if (rec.next()) {
                                 sql = "INSERT INTO domain "
-                                        + "(domain_name,username,main,accept,link) "
+                                        + "(domain_name,username,main,accept) "
                                         + "VALUES ('" + rec.getString("domain_name") + "' "
                                         + ",'" + username + "'"
-                                        + ",0,'0','" + link + "')";
+                                        + ",0,'0')";
                                 s.executeUpdate(sql);
                                 response.sendRedirect("datausers.jsp");
                             }

@@ -14,7 +14,7 @@
     <head>
         <meta charset="UTF-8">
         <title>EDIT</title>
-        <link href="../../../plugins/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="../../../plugins/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link href="../../../style.css" type="text/css" rel="stylesheet">
@@ -74,7 +74,7 @@
         
         
 
-        <script src="../../../plugins/jquery/jquery.js"></script>
+        <script src="../../../plugins/jquery/jquery.min.js"></script>
         <script src="../../../plugins/bootstrap/js/bootstrap.js"></script>
         <script src="../../../plugins/popper/umd/popper.js"></script>
 

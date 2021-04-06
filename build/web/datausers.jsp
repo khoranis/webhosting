@@ -80,6 +80,9 @@
                         <input type="email" placeholder="email@.com" class="form-control" name="email" required>
                     </div>
                     <div class="col-md-4">
+                        <input type="password" placeholder="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="col-md-4">
                         <button class="btn btn-success" type="submit">เพิ่มผู้ใช้งาน</button>
                     </div>
                 </div>

@@ -53,6 +53,7 @@
                         + "SET password = '" + password + "' "
                         + "WHERE username = '" + username + "' ";
                 s.executeUpdate(sql);
+                
                 if (s != null) {
         %>
         <span class="text-success">change password success ! <a href="dashboard.jsp">กลับไปหน้าหลัก</a></span>
